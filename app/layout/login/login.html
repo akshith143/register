@@ -1,0 +1,30 @@
+<md-content   layout="row" layout-align="space-around" layout-padding="layout-padding" class="form">
+  <md-card flex="flex" flex-gt-sm="50" flex-gt-md="33">
+      <md-card-title class="card-title">
+              <h2><span>Login</span></h2>
+      </md-card-title>       
+      <md-card-content>
+          <form name="loginForm">
+               <md-input-container class="md-block">
+                   <label>Username</label>
+                   <input type="text" name="email" ng-model="username"  required=""/>
+               </md-input-container>
+              
+                <md-input-container class="md-block">   
+              <label>Password</label>
+              <input type="password" id="password" ng-model="password"  required="" md-maxlength="16"  />
+            </md-input-container>
+                  
+               
+            <center>
+               <md-button ng-disabled="!loginForm.$valid" ng-click="submit()" class="md-raised md-primary">&nbsp Login &nbsp</md-button>
+
+              <md-button  ng-click="register()" clas="md-raised md-warn">&nbsp signup &nbsp</md-button>
+            
+              </center><br>
+              <center><md-button ng-href="#">Forgot password?</md-button></center>
+          </form>
+      </md-card-content>
+  </md-card>
+</md-content>
+
